@@ -196,4 +196,4 @@ class Main {
         AoC2018D10 aoc = new AoC2018D10();
         aoc.initialize();
     }
-};
+}
