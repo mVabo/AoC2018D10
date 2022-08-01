@@ -60,7 +60,7 @@ class AoC2018D10 {
     int seconds = 0;
 
     // The main function reads the input and triggers a loop
-    public void initialize() {
+    public void initialize() {  // O(n)
         // Try-catch for catching potential read errors
         try {
             // Define the file and create a scanner/reader
@@ -111,7 +111,7 @@ class AoC2018D10 {
     // This is the loop that is being triggered by initialize(), it moves all the points until the area stops decreasing
 
     // Based on the images in the description of the task, the area will be smallest when all the points are in the correct place
-    private void pointLoop() {
+    private void pointLoop() {  // O(n^2)
         while (true) {
             // Add another second for every loop (as one loop simulates one second in the skies)
             this.seconds++;
@@ -160,7 +160,7 @@ class AoC2018D10 {
         printArea();
     }
 
-    private void printArea() {
+    private void printArea() {  // O(n^3)
         // Find dimensions by subtracting min from max
         int height = maxY - minY;
         int width = maxX - minY;
